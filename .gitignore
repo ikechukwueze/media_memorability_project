@@ -1,3 +1,5 @@
 resources
 pyenv
 *.pyc
+*.sqlite3
+**/migrations/0*.py
