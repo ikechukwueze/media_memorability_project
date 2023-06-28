@@ -58,7 +58,7 @@ async function uploadVideo(e) {
                 $("#uploadForm").trigger("reset");
 
                 // replace spinner with server response
-                $("#video_score").replaceWith(`<p class='card-text fw-bold fs-1' id='video_score'>${res.score}</p>`);
+                $("#video_score").replaceWith(`<p class='card-text fw-bold fs-1' id='video_score'>${res.mem_score}</p>`);
             },
             error: function (jqXHR, textStatus, errorThrown) {
                 // console error
