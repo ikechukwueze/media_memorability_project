@@ -5,6 +5,9 @@ from nltk.corpus import stopwords
 
 
 
+nlp = spacy.load('en_core_web_sm')
+stopwords = nlp.Defaults.stop_words
+
 
 def normalize_text(text):
   return text.lower()
@@ -25,15 +28,13 @@ def remove_punctuations(text):
 
 
 def lemmatize_text(text):
-  nlp = spacy.load('en_core_web_sm')
   doc = nlp(text)
   lemmas = [word.lemma_ for word in doc]
   return lemmas
 
 
 def remove_stop_words(tokens):
-  english_stopwords = stopwords.words('english')
-  new_tokens = [token for token in tokens if token not in english_stopwords]
+  new_tokens = [token for token in tokens if token not in stopwords]
   return new_tokens
 
 
