@@ -1,7 +1,6 @@
 import string
 import spacy
 import contractions
-from nltk.corpus import stopwords
 
 
 
